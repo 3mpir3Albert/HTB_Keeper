@@ -66,3 +66,17 @@ After gaining access to the user lnorgaard, it would be time to do a system reco
 ### CVE-2023-32784
 
 The vulnerability affects all Keepass software versions below 2.54. The only requirement is to have a memory dump. It does not matter where the dump comes from, whether it is a process dump, a swap file (a dedicated space on a computer's storage device that is used as virtual memory. Virtual memory is a memory management technique that allows the operating system to use part of the storage device as if it were additional RAM), a hibernation file (this is a system file used to support the hibernation function. Hibernation is a power-saving mode in which the contents of a computer's RAM are saved to the hard disk or other non-volatile storage device before the system is shut down) or a RAM dump.
+
+Keepass works with custom text boxes for many purposes, for example to enter the master password or to edit passwords, among others.
+When a person writes in these boxes, a leftover string is created in memory, which is practically impossible to delete. If you type "Password" seven leftover strings are created in memory:
+- ·a
+- ··s
+- ···s
+- ····w
+- ·····o
+- ······r
+- ·······d
+
+Guessing the first character will retrieve the master password in plain text.
+
+To recover the leftover strings there is a script programmed in C# that will help you to automate this process (https://github.com/vdohney/keepass-password-dumper).
