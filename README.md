@@ -60,3 +60,9 @@ There seems to be a problem with a memory dump of the keepass program in a file 
 If you try to see if the credentials are reused in other services such as SSH, you will be able to log in with the user lnorgaard.
 
 [![Access.png](https://i.postimg.cc/9Ms2vTK9/Access.png)](https://postimg.cc/2bdgWqzj)
+## Post-Exploitation Phase
+
+After gaining access to the user lnorgaard, it would be time to do a system recognition, but remember that there is a file in the Lise home path that contains the Keepass memory dump. So it's time to introduce CVE-2023-32784.
+### CVE-2023-32784
+
+The vulnerability affects all Keepass software versions below 2.54. The only requirement is to have a memory dump. It does not matter where the dump comes from, whether it is a process dump, a swap file (a dedicated space on a computer's storage device that is used as virtual memory. Virtual memory is a memory management technique that allows the operating system to use part of the storage device as if it were additional RAM), a hibernation file (this is a system file used to support the hibernation function. Hibernation is a power-saving mode in which the contents of a computer's RAM are saved to the hard disk or other non-volatile storage device before the system is shut down) or a RAM dump.
