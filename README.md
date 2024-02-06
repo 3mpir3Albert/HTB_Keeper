@@ -49,4 +49,6 @@ wfuzz -c -t 200 -hc 302 -w /usr/share/SecLists/Discovery/Web-Content/directory-l
 [![wfuzz.png](https://i.postimg.cc/BnqTT4rD/wfuzz.png)](https://postimg.cc/crbtZy44)
 ## Exploitation Phase
 
-At http://tickets.keeper.htb/rt there is another authentication panel that can be used to enter the root credentials and log in to the application tracking software as this user.
+At http://tickets.keeper.htb/rt there is another authentication panel that can be used to enter the root credentials and enter "request tracker" as this user. Once there, you can access as much information as possible, as the access was made with the user with maximum privileges, so all the ticket history was accessed and this information can be seen there:
+
+[![Info.png](https://i.postimg.cc/XqQC45zN/Info.png)](https://postimg.cc/q66RGNrW)
