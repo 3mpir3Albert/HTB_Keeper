@@ -39,3 +39,5 @@ By repeating the technological scan on port 80, but changing the subdomain, the 
 The presence of request tracker software is notable. Therefore, the Internet was searched for vulnerabilities, but nothing was found. Due to the lack of information on vulnerabilities, another path was taken. Default root credentials were found:
 - USER: root
 - PASSWORD: password
+
+Entering the credentials in the login panel found at http://tickets.keeper.htb would not give root access to the request tracking software. But, if you do a resource scan you may see new paths where it is possible to find new login panels.
