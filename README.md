@@ -52,3 +52,5 @@ wfuzz -c -t 200 -hc 302 -w /usr/share/SecLists/Discovery/Web-Content/directory-l
 At http://tickets.keeper.htb/rt there is another authentication panel that can be used to enter the root credentials and enter "request tracker" as this user. Once there, you can access as much information as possible, as the access was made with the user with maximum privileges, so all the ticket history was accessed and this information can be seen there:
 
 [![Info.png](https://i.postimg.cc/XqQC45zN/Info.png)](https://postimg.cc/q66RGNrW)
+
+There seems to be a problem with a memory dump of the keepass program in a file. This file is in Lise's home directory, so probably the way to hack this machine is to get access to lnorgaard home and try to get the master password to decrypt the file and see the contents. But how do you get access to Lise's account?
