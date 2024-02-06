@@ -22,7 +22,7 @@ As shown in the last image, two open ports were discovered exposing two differen
 - Port 22: SSH service.
 - Port 80: HTTP service.
 
-Due to the fairly updated version of SSH, a technological scan was performed on port 443.
+Due to the fairly updated version of SSH, a technological scan was performed on port 80.
 
 [![whatweb.png](https://i.postimg.cc/T3yRxZyZ/whatweb.png)](https://postimg.cc/gxW9qtHD)
 
@@ -31,3 +31,8 @@ The tools do not yield much information, so the website was accessed to show wha
 [![Web.png](https://i.postimg.cc/N0mD3jQL/Web.png)](https://postimg.cc/Lq4jfRYM)
 
 As you can see in the image, the subdomain to audit is tickets.keeper.htb, and so in /etc/hosts there are two domains linked to one IP.
+
+By repeating the technological scan on port 80, but changing the subdomain, the following information can be seen:
+
+[![whatweb2.png](https://i.postimg.cc/CMHVkbnr/whatweb2.png)](https://postimg.cc/3WR6H4B2)
+
