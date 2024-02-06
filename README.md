@@ -80,3 +80,26 @@ When a person writes in these boxes, a leftover string is created in memory, whi
 Guessing the first character will retrieve the master password in plain text.
 
 To recover the leftover strings there is a script programmed in C# that will help you to automate this process (https://github.com/vdohney/keepass-password-dumper).
+
+```bash
+dotnet run KeePassDumpFull.dmp --project <route_to_dotnet_project> #Running the above script
+```
+
+The following file with possible passwords was retrieved.
+
+[![contrase-as.png](https://i.postimg.cc/fTRhCmCB/contrase-as.png)](https://postimg.cc/hh6wPJHd)
+
+By searching the internet it is possible to find a typical Danish dish that contains the letters in the first line of the picture above. It is called Rødgrød med fløde, so if you proceed to enter this as a password in keepass you will not have access to it. But if you enter rødgrød med fløde you will see the entire contents of keepass decrypted.
+
+[![Keepass.png](https://i.postimg.cc/sXHBTSqS/Keepass.png)](https://postimg.cc/8JWP5F1P)
+
+As you can see, there is a PuTTy key to connect to root user via SSH. Now, it is the turn to transform this key into an openssh key to connect to root's account.
+
+```bash
+puttygen clave.ppk -O public -o clave_id_rsa.pub # Generates openssh public key from puTTy key
+puttygen clave.ppk -O private-openssh -o id_rsa # Generates openssh private key from puTTy key
+```
+
+Once both keys have been obtained, all that remains is to connect via SSH with the private key to root's account.
+
+[![root.png](https://i.postimg.cc/tJ3C6x3F/root.png)](https://postimg.cc/wRBp83bB)
