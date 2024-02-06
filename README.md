@@ -22,7 +22,7 @@ As shown in the last image, two open ports were discovered exposing two differen
 - Port 22: SSH service.
 - Port 80: HTTP service.
 
-Due to the fairly updated version of SSH, a technological scan was performed on port 80.
+Due to the fairly up-to-date version of SSH, it seems that the way to go is to perform a technology scan on port 80.
 
 [![whatweb.png](https://i.postimg.cc/T3yRxZyZ/whatweb.png)](https://postimg.cc/gxW9qtHD)
 
@@ -53,4 +53,8 @@ At http://tickets.keeper.htb/rt there is another authentication panel that can b
 
 [![Info.png](https://i.postimg.cc/XqQC45zN/Info.png)](https://postimg.cc/q66RGNrW)
 
-There seems to be a problem with a memory dump of the keepass program in a file located in Lise's home directory, so probably the way to hack this machine is to get access to lnorgaard home and try to get the master password to decrypt the file and see the content. But how to access Lise's account?
+There seems to be a problem with a memory dump of the keepass program in a file located in Lise's home directory, so probably the way to hack this machine is to access lnorgaard's home and try to get the master password to decrypt the file and see the content. But how to access Lise's account? After logging into the website it is possible to go to the top bar and in the middle of it hover the mouse over the administration dropdown and then a subsection called Users appears. By clicking on it a new page appears with all the users registered in "Request Tracker". As you can see, the user lnorgaard appears, so click on him and inspect the user information. In a text box below you will see some credentials:
+
+[![Leak.png](https://i.postimg.cc/PJYV3812/Leak.png)](https://postimg.cc/XBNgXqHC)
+
+If you try to see if the credentials are reused in other services such as SSH, you will be able to log in with the user lnorgaard.
