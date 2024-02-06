@@ -36,3 +36,6 @@ By repeating the technological scan on port 80, but changing the subdomain, the 
 
 [![whatweb2.png](https://i.postimg.cc/CMHVkbnr/whatweb2.png)](https://postimg.cc/3WR6H4B2)
 
+The presence of request tracker software is notable. Therefore, the Internet was searched for vulnerabilities, but nothing was found. Due to the lack of information on vulnerabilities, another path was taken. Default root credentials were found:
+- USER: root
+- PASSWORD: password
