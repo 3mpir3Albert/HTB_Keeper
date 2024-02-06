@@ -47,3 +47,6 @@ wfuzz -c -t 200 -hc 302 -w /usr/share/SecLists/Discovery/Web-Content/directory-l
 ```
 
 [![wfuzz.png](https://i.postimg.cc/BnqTT4rD/wfuzz.png)](https://postimg.cc/crbtZy44)
+## Exploitation Phase
+
+At http://tickets.keeper.htb/rt there is another authentication panel that can be used to enter the root credentials and log in to the application tracking software as this user.
