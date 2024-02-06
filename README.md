@@ -58,3 +58,5 @@ There seems to be a problem with a memory dump of the keepass program in a file 
 [![Leak.png](https://i.postimg.cc/PJYV3812/Leak.png)](https://postimg.cc/XBNgXqHC)
 
 If you try to see if the credentials are reused in other services such as SSH, you will be able to log in with the user lnorgaard.
+
+[![Access.png](https://i.postimg.cc/9Ms2vTK9/Access.png)](https://postimg.cc/2bdgWqzj)
