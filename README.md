@@ -53,4 +53,4 @@ At http://tickets.keeper.htb/rt there is another authentication panel that can b
 
 [![Info.png](https://i.postimg.cc/XqQC45zN/Info.png)](https://postimg.cc/q66RGNrW)
 
-There seems to be a problem with a memory dump of the keepass program in a file. This file is in Lise's home directory, so probably the way to hack this machine is to get access to lnorgaard home and try to get the master password to decrypt the file and see the contents. But how do you get access to Lise's account?
+There seems to be a problem with a memory dump of the keepass program in a file located in Lise's home directory, so probably the way to hack this machine is to get access to lnorgaard home and try to get the master password to decrypt the file and see the content. But how to access Lise's account?
