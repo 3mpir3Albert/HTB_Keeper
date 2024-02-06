@@ -40,4 +40,10 @@ The presence of request tracker software is notable. Therefore, the Internet was
 - USER: root
 - PASSWORD: password
 
-Entering the credentials in the login panel found at http://tickets.keeper.htb would not give root access to the request tracking software. But, if you do a resource scan you may see new paths where it is possible to find new login panels.
+Entering the credentials in the login panel found at http://tickets.keeper.htb would not give root access to the request tracking software. But, if you do a resource scan you may see new paths where it is possible to find new login panels, as it is shown below:
+
+```bash
+wfuzz -c -t 200 -hc 302 -w /usr/share/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt http://tickets.keeper.htb/FUZZ
+```
+
+[![wfuzz.png](https://i.postimg.cc/BnqTT4rD/wfuzz.png)](https://postimg.cc/crbtZy44)
